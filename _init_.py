@@ -7,7 +7,7 @@ def getHTMLText(url):
         r = requests.get(url, timeout=30)
         r.raise_for_status() # generate error information
         r.encoding = r.apparent_encoding # could be revised to enhance the speed
-        return r.next # return the HTML to other parts of the programmme
+        return r.content # return the HTML to other parts of the programmme
     except:
         return ""
 
